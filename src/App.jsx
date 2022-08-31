@@ -16,7 +16,7 @@ export default function App() {
           <Suspense fallback={<Loader />}>
             <Routes>
               <Route
-                path="/currency-converter"
+                path="/currency-converter/"
                 element={<CurrencyConverter />}
               />
             </Routes>

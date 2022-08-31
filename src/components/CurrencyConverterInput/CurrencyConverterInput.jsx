@@ -4,8 +4,8 @@ import s from './CurrencyConverterInput.module.css'
 export default function CurrencyConverterInput(props) {
     return (
         <div className={s.group}>
-            <input className={s.valueInput} type="text" value={props.amount} onChange={event => props.onAmountChange(event.target.value)} />
-            <select className={s.select} vlaue={props.currency} onChange={event => props.onCurrencyChange(event.target.value)}>
+            <input key={'input'} className={s.valueInput} type="text" value={props.amount} onChange={event => props.onAmountChange(event.target.value)} />
+            <select key={'select'} className={s.select} vlaue={props.currency} onChange={event => props.onCurrencyChange(event.target.value)}>
                 {props.currencies.map((currency => (
                     <option vlaue={currency}>{currency}</option>
                 )))}

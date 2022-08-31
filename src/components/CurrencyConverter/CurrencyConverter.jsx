@@ -13,7 +13,7 @@ export default function CurrencyConverter() {
   const [rates, setRates] = useState([]);
 
   useEffect(() => {
-    axios.get('https://api.apilayer.com/fixer/latest?base=USD&apikey=vHd8sZWj3nnqKOeFPHr0JTYMidLq1pfZ')
+    axios.get('https://api.apilayer.com/fixer/latest?base=USD&apikey=GTe2mTtGiSLxOnX3K5fu3LHQRcTQtSLH')
       .then(response => {
         setRates(response.data.rates);
     })

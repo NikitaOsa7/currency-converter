@@ -8,15 +8,14 @@ export default function CurrentExchangeRate() {
 
 
   useEffect(() => {
-    axios.get('https://api.apilayer.com/fixer/latest?base=USD&apikey=vHd8sZWj3nnqKOeFPHr0JTYMidLq1pfZ')
+    axios.get('https://api.apilayer.com/fixer/latest?base=USD&apikey=GTe2mTtGiSLxOnX3K5fu3LHQRcTQtSLH')
       .then(response => {
-        setUsd(format(response.data.rates.UAH));
-        console.log('asdas');
+        setUsd(format(response.data.rates.UAH));;
     })
   }, [])
 
     useEffect(() => {
-    axios.get('https://api.apilayer.com/fixer/latest?base=EUR&apikey=vHd8sZWj3nnqKOeFPHr0JTYMidLq1pfZ')
+    axios.get('https://api.apilayer.com/fixer/latest?base=EUR&apikey=GTe2mTtGiSLxOnX3K5fu3LHQRcTQtSLH')
       .then(response => {
         setEur(format(response.data.rates.UAH));
     })
@@ -29,22 +28,25 @@ export default function CurrentExchangeRate() {
   return (
     <div>
       <table className={s.table}>
-        <tr>
-          <th className={s.th}>Валюта</th>
-          <th className={s.th}>Покупка</th>
-        </tr>
-        <tr>
-          <td className={s.td}>USD</td>
-          <td className={s.td}>{usd}</td>
-        </tr>
-        <tr>
-          <td className={s.td}>EUR</td>
-          <td className={s.td}>{eur}</td>
-        </tr>
+        <tbody>
+          <tr>
+            <th className={s.th}>Валюта</th>
+            <th className={s.th}>Покупка</th>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td className={s.td}>USD</td>
+            <td className={s.td}>{usd}</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td className={s.td}>EUR</td>
+            <td className={s.td}>{eur}</td>
+          </tr>
+        </tbody>
       </table>
-     
     </div>
-
-    
   );
 };
